@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- I will add image later -->
+                <img src="" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Competative Programmer</p>
+                <h1>Hi, I am <span>Toslim Aman</span> <br>From Bangladesh</h1>
+            </div>
+
+        </div>
+    </div>    
+
+<!-- ------------------about------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <!-- I will add image later -->
+                    <img src="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I will write this later</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>C++, JavaScript, OOP Concepts</li>
+                            <li><span>Problem Solving</span><br>Competitive Programming & DSA</li>
+                            <li><span>Web Technologies</span><br>HTML, CSS, JavaScript, React, Node.js (Learning)</li>
+                        </ul>
+                    </div>
+
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Mentor Cohort</span><br>Guided and supported junior students in learning and academic activities</li>
+                            <li><span>Instructor</span><br>Taught and helped junior students with studies and problem solving</li>
+                            <li><span>Competitive Programming</span><br>Practicing problem solving and Data Structures & Algorithms</li>
+                        </ul>
+                    </div>
+
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Present</span><br>B.Sc in Computer Science & Engineering, BAIUST</li>
+                            <li><span>2020 - 2022</span><br>HSC, Kalikapur Abdul Matin Khasru Govt College</li>
+                            <li><span>2018 - 2020</span><br>SSC, Cumilla Modern High School</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
