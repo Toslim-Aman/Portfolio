@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div id="header">
@@ -40,12 +41,14 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I will write this later</p>
+                    <p>
+                        I am a CSE student passionate about software development and problem solving. I actively practice competitive programming and Data Structures & Algorithms. Currently, I am learning MERN stack development and building web projects. I also have experience mentoring junior students, which improved my leadership and communication skills.
+                    </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
-                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
@@ -77,11 +80,44 @@
         </div>
     </div>
 
+<!-- -------------------------Services---------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>
+                        I design and develop responsive websites using HTML, CSS, and JavaScript. Currently expanding my skills in full-stack MERN development.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>Problem Solving</h2>
+                    <p>
+                        I actively practice competitive programming and Data Structures & Algorithms to build strong logical thinking and efficient coding skills.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h2>Mentoring & Teaching</h2>
+                    <p>
+                        I support junior students by teaching programming basics and helping them improve their problem-solving abilities.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname, event) {
+        function opentab(tabname) {
             for(tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
