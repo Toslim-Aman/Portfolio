@@ -447,3 +447,11 @@ nav .fas {
         font-size: 16px;
     }
 }
+
+#msg {
+    color: #61b752;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
