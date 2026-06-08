@@ -49,7 +49,7 @@ An IoT-based healthcare system designed to monitor health conditions and detect 
 
 ## Live Demo
 
-Coming Soon
+[Coming Soon](https://toslim-aman.github.io/Portfolio/)
 
 ## Contact
 
