@@ -10,18 +10,19 @@ html {
 }
 
 body {
-    background: #080808;
+    background: #000000;
     color: #fff;
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    /*I will add image later*/
-    background-image: url();
-    background-size: cover;
-    background-position: center;
+    background-image: url(images/myimage.jpeg);
+    background-repeat: no-repeat;
+    background-size: 48%;
+    background-position: right -10px top -80px;
     background-attachment: fixed;
+    
 }
 
 .container {
@@ -95,11 +96,13 @@ nav ul li a:hover::after {
 
 .about-col-1 {
     flex-basis: 35%;
+    text-align: center;
 }
 
 .about-col-1 img {
-    width: 100%;
+    width: 70%;
     border-radius: 15px;
+    max-width: 300px;
 }
 
 .about-col-2 {
@@ -377,12 +380,15 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url();
+        background-image: url(images/myimage3.jpeg);
+        background-size: 120%;
+        background-position: right -50px center;
     }
     
     .header-text {
-        margin-top: 100%;
+        margin-top: 110%;
         font-size: 16px;
+        text-align: center;
     }
 
     .header-text h1 {
@@ -428,6 +434,11 @@ nav .fas {
 
     .about-col-1 {
         margin-bottom: 30px;
+    }
+
+    .about-col-1 img {
+        width: 85%;
+        max-width: 250px;
     }
 
     .about-col-2 {
