@@ -372,6 +372,11 @@ form .btn2 {
     color: #ff004f;
 }
 
+form .btn2:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 
 /* ---------------------css for small screens---------- */
 nav .fas {
@@ -460,9 +465,12 @@ nav .fas {
 }
 
 #msg {
-    color: #61b752;
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
     font-size: 16px;
-    display: block;
+    font-weight: 500;
+    margin-top: 10px;
     margin-bottom: 5px;
-    margin-top: 6px;
+    display: none;
 }

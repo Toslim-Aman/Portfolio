@@ -217,19 +217,48 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxwqviv6Hp_XXIS30b-tDBnRqNjYCjNXwuEXSOASPdjWnOxHWRu3gKrGEQF4R6rURI/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
+        const submitBtn = document.querySelector('button[type="submit"]')
 
         form.addEventListener('submit', e => {
             e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => response.json())
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function(){
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
+
+            submitBtn.disabled = true
+            submitBtn.innerHTML = "Sending..."
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => response.json())
+            .then(response => {
+                msg.style.display = "inline-block";
+                msg.style.background = "#61b752"; 
+                msg.style.color = "#fff";
+                msg.innerHTML = "Message sent successfully"
+
+                setTimeout(() => {
+                    msg.innerHTML = ""
+                }, 3000)
+
+                form.reset()
+            })
+            .catch(error => {
+                msg.style.display = "inline-block";
+                msg.style.background = "#ff4d4d"; 
+                msg.style.color = "#fff";
+                msg.innerHTML = "Something went wrong"
+
+                console.error('Error!', error.message)
+            })
+            .finally(() => {
+                submitBtn.disabled = false
+                submitBtn.innerHTML = "Submit"
+
+                setTimeout(() => {
+                    msg.style.display = "none";
+                    msg.innerHTML = "";
+                }, 3000);
+            })
         })
     </script>
 
