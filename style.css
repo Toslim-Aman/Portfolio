@@ -388,11 +388,12 @@ form .btn2:disabled {
 
 
 /* ---------------------css for small screens---------- */
+
 nav .fas {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
     nav {
         padding: 15px 6%;
